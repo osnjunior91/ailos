@@ -80,6 +80,27 @@ artifacts/
 *.userosscache
 *.sln.docstates
 
+# Arquivos e pastas do Visual Studio
+.vs/
+bin/
+obj/
+
+# Arquivos de compilação .NET
+*.dll
+*.pdb
+*.exe
+*.cache
+*.log
+*.json
+
+# Pacotes NuGet
+*.nupkg
+
+# Arquivos de usuário e configuração
+*.user
+*.suo
+*.sln.docstates
+
 # User-specific files
 *.suo
 *.user

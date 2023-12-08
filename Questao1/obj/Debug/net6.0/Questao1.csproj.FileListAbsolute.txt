@@ -1,0 +1,15 @@
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\Questao1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\Questao1.AssemblyInfoInputs.cache
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\Questao1.AssemblyInfo.cs
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\Questao1.csproj.CoreCompileInputs.cache
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\Questao1.sourcelink.json
+C:\Projects\ailos\Questao1\bin\Debug\net6.0\Questao1.exe
+C:\Projects\ailos\Questao1\bin\Debug\net6.0\Questao1.deps.json
+C:\Projects\ailos\Questao1\bin\Debug\net6.0\Questao1.runtimeconfig.json
+C:\Projects\ailos\Questao1\bin\Debug\net6.0\Questao1.dll
+C:\Projects\ailos\Questao1\bin\Debug\net6.0\Questao1.pdb
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\Questao1.dll
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\refint\Questao1.dll
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\Questao1.pdb
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\Questao1.genruntimeconfig.cache
+C:\Projects\ailos\Questao1\obj\Debug\net6.0\ref\Questao1.dll
