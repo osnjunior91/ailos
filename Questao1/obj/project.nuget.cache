@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "DF5gK+NdrD9N8nzK/gFblwzFm+ynx1hpWm+twzgAzf025iNc/sPKrYsNQZgRSYppAMwJLX2/jqgUPvXdrDXIqw==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\ailos\\Questao1\\Questao1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\osnju\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\osnju\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\osnju\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\osnju\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
