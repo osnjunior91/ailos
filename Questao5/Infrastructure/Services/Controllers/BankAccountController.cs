@@ -8,12 +8,10 @@ namespace Questao5.Infrastructure.Services.Controllers
     [Route("[controller]")]
     public class BankAccountController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
         public IMediator _mediator;
 
-        public BankAccountController(ILogger<WeatherForecastController> logger, IMediator mediator)
+        public BankAccountController(IMediator mediator)
         {
-            _logger = logger;
             _mediator = mediator;
         }
 
