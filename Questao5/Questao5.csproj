@@ -32,8 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Commands\Requests\" />
-    <Folder Include="Application\Commands\Responses\" />
     <Folder Include="Domain\Language\" />
     <Folder Include="Infrastructure\Database\CommandStore\Requests\" />
     <Folder Include="Infrastructure\Database\CommandStore\Responses\" />
