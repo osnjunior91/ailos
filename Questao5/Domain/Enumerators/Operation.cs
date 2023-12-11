@@ -34,7 +34,7 @@ namespace Questao5.Domain.Enumerators
                     return type;
                 }
             }
-            throw new ArgumentException("Invalid FinancialOperationType string");
+            throw new BusinessException(Erros.ErrorType.INVALID_TYPE);
         }
     }
 }

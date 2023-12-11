@@ -32,7 +32,7 @@ namespace Questao5.Infrastructure.Database.CommandStore
                     IdMovimento = idMovimento,
                     IdContaCorrente = request.AccountId,
                     DataMovimento = dataMovimento,
-                    TipoMovimento = request.Type.ToValue(),
+                    TipoMovimento = request,
                     Valor = request.Value
                 };
 
