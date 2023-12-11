@@ -25,8 +25,9 @@ namespace Questao5.Infrastructure.Database.QueryStore
 
                 if (reponse != null)
                 {
-                    return new Account(reponse);
-                    //account.SetOperations(GetMovementsForAccount(accountId, connection).ToList());
+                    Account account = new Account(reponse);
+                    account.SetOperations(GetMovementsForAccount(accountId, connection).ToList());
+                    return account;
                 }
 
                 return null;
@@ -35,9 +36,10 @@ namespace Questao5.Infrastructure.Database.QueryStore
 
         private IEnumerable<Operation> GetMovementsForAccount(string accountId, SqliteConnection connection)
         {
-            return connection.Query<Operation>(
+            var response = connection.Query<dynamic>(
                 "SELECT * FROM movimento WHERE idcontacorrente = @AccountId",
                 new { AccountId = accountId });
+            return response.Select(x => new Operation(x));
         }
     }
 }

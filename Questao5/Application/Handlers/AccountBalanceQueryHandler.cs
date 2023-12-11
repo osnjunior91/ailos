@@ -24,7 +24,10 @@ namespace Questao5.Application.Handlers
             if(!accountData.IsActive)
                 throw new BusinessException(ErrorType.INACTIVE_ACCOUNT);
 
-            return new BalanceQueryResponse(accountData.Number, accountData.Name, DateTime.Now, 0);
+            var totalCredit = accountData.Operations.Where(x => x.OperationType == Domain.Enumerators.Operation.FinancialOperationType.Credit).Sum(x => x.Value);
+            var totalDebit = accountData.Operations.Where(x => x.OperationType == Domain.Enumerators.Operation.FinancialOperationType.Debit).Sum(x => x.Value);
+
+            return new BalanceQueryResponse(accountData.Number, accountData.Name, DateTime.Now, (totalCredit - totalDebit));
         }
     }
 }
