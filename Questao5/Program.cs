@@ -1,6 +1,8 @@
 using MediatR;
+using Questao5.Application.Middlewares;
 using Questao5.Infrastructure.Database;
 using Questao5.Infrastructure.Database.CommandStore;
+using Questao5.Infrastructure.Database.Idempotence;
 using Questao5.Infrastructure.Database.QueryStore;
 using Questao5.Infrastructure.Sqlite;
 using System.Reflection;
@@ -16,6 +18,7 @@ builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 builder.Services.AddSingleton(new DatabaseConfig { Name = builder.Configuration.GetValue<string>("DatabaseName", "Data Source=database.sqlite") });
 builder.Services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
 builder.Services.AddSingleton<ISqlConnectionFactory, SqlConnectionFactory>();
+builder.Services.AddSingleton<IIdempotenceRepository, IdempotenceRepository>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IWithdrawRepository, WithdrawRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -36,6 +39,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseMiddleware<IdempotenceMiddleware>();
+app.UseMiddleware<BusinessExceptionMiddleware>();
 
 // sqlite
 #pragma warning disable CS8602 // Dereference of a possibly null reference.

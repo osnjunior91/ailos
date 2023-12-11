@@ -19,21 +19,4 @@ public class BusinessException : Exception
     {
         Error = errorType;
     }
-
-    public override string Message
-    {
-        get
-        {
-            string errorMessage = Error switch
-            {
-                ErrorType.INVALID_ACCOUNT => "Apenas contas correntes cadastradas podem receber movimentação.",
-                ErrorType.INACTIVE_ACCOUNT => "Apenas contas correntes ativas podem receber movimentação.",
-                ErrorType.INVALID_VALUE => "Apenas valores positivos podem ser recebidos.",
-                ErrorType.INVALID_TYPE => "Apenas os tipos 'débito' ou 'crédito' podem ser aceitos.",
-                _ => base.Message
-            };
-
-            return $"Erro: {Error}. Tipo: {errorMessage}";
-        }
-    }
 }
